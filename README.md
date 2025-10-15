@@ -1,9 +1,10 @@
-📊 Sales Dashboard – Power BI Project
-🧾 Overview
+**📊 Sales Dashboard – Power BI Project**
+
+**🧾 Overview**
 
 This Power BI project presents a Sales Performance Dashboard that combines insights from Orders and Details datasets. It enables an interactive analysis of sales, profit, quantity, and customer trends across multiple dimensions such as city, category, and payment mode.
 
-🎯 Objectives
+**🎯 Objectives**
 
 To visualize total and monthly sales performance.
 
@@ -13,7 +14,7 @@ To analyze customer purchase behavior and profit trends.
 
 To monitor payment mode distribution and sales contribution.
 
-🧩 Data Model
+**🧩 Data Model**
 
 The dashboard is built on a one-to-many relationship between the following tables:
 
@@ -22,10 +23,13 @@ Orders (1) ——< Details (∞)
 
 Linked through the common field Order ID.
 
-Table	Key Columns	Description
-Orders	Order ID, Order Date, CustomerName, State, City	Contains order-level information
-Details	Order ID, Amount, Profit, Quantity, Category, Sub-Category, PaymentMode	Contains item-level transaction details
-📈 Key Insights
+| 🧾 **Table** | 🔑 **Key Columns** | 📝 **Description** |
+|--------------|--------------------|--------------------|
+| **Orders**  | `Order ID`, `Order Date`, `CustomerName`, `State`, `City` | Contains **order-level** information |
+| **Details** | `Order ID`, `Amount`, `Profit`, `Quantity`, `Category`, `Sub-Category`, `PaymentMode` | Contains **item-level transaction** details |
+
+
+**📈 Key Insights**
 
 Total Sales: $437.8K
 
@@ -47,7 +51,7 @@ Furniture: $127K
 
 Most Used Payment Mode: Cash on Delivery (35.4%)
 
-📊 Dashboard Features
+**📊 Dashboard Features**
 
 Slicers: City, Category, and Year-Month filters
 
@@ -73,7 +77,7 @@ Average Profit per Order
 
 Total Quantity
 
-⚙️ Tools & Techniques
+**⚙️ Tools & Techniques**
 
 Tool: Power BI Desktop
 
@@ -87,7 +91,11 @@ Total Sales = SUM(Details[Amount])
 
 Profit Margin = DIVIDE(SUM(Details[Profit]), SUM(Details[Amount]))
 
-💡 Insights & Business Impact
+Avg Profit per Order = AVERAGE(Details[Profit])
+
+Sales MoM Growth = (CurrentMonthSales - PreviousMonthSales) / PreviousMonthSales
+
+**💡 Insights & Business Impact**
 
 This dashboard empowers decision-makers to:
 
@@ -99,6 +107,4 @@ Optimize payment strategies and customer engagement.
 
 Plan targeted marketing campaigns based on sales performance.
 
-Avg Profit per Order = AVERAGE(Details[Profit])
 
-Sales MoM Growth = (CurrentMonthSales - PreviousMonthSales) / PreviousMonthSales
